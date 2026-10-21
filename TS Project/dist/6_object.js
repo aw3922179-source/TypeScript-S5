@@ -9,17 +9,22 @@ let employee1 = {
     name: "Saad",
     email: "saad@gamil.com",
     info() {
-        console.log("The name is " + this.name);
+        console.log("Id :" + this.id);
+        console.log("Name :" + this.name);
+        console.log("Email :" + this.email);
     },
 };
 let employee2 = {
     id: 2,
     name: "Ayaaan",
-    email: "ayan@gamil.com",
     info() {
-        console.log("The name is " + this.name);
+        console.log("Id :" + this.id);
+        console.log("Name :" + this.name);
     },
 };
 employee1.info();
 employee2.info();
+// employee1.id = 3 // error
+employee1.name = "Muhammad Saad";
+employee1.info();
 export {};

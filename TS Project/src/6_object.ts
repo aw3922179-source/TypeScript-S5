@@ -6,9 +6,9 @@
 // }
 
 interface IEmployee  {
-    id: number,
+    readonly id: number,
     name: string,
-    email: string
+    email?: string
     info: () => void
 }
 
@@ -17,18 +17,25 @@ let employee1 : IEmployee = {
     name: "Saad",
     email: "saad@gamil.com",
     info() {
-        console.log("The name is " + this.name)
+        console.log("Id :" + this.id)
+        console.log("Name :" + this.name)
+        console.log("Email :" + this.email)
     },
 }
 
 let employee2 : IEmployee ={
     id:2,
     name: "Ayaaan",
-    email: "ayan@gamil.com",
     info() {
-        console.log("The name is " + this.name)
+        console.log("Id :" + this.id)
+        console.log("Name :" + this.name)
     },
 }
 
 employee1.info()
 employee2.info()
+
+// employee1.id = 3 // error
+employee1.name = "Muhammad Saad"
+
+employee1.info()
